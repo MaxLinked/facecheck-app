@@ -38,3 +38,9 @@ body {
 
 /* Number tabular digits by default in tabular contexts */
 .tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* Prevent native drag-ghost on any link/image inside the phone screen (desktop drag-scroll) */
+a, img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
