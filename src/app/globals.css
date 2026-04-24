@@ -30,6 +30,17 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Lock the viewport to the real usable height on mobile — avoids the
+     100vh-includes-browser-chrome bug. `dvh` = dynamic viewport height. */
+  height: 100dvh;
+  overflow: hidden;
+  /* Prevent iOS rubber-banding on the body; our inner scroll area handles overflow */
+  overscroll-behavior: none;
+}
+
+/* Mobile: remove backdrop color — phone fills full screen */
+@media (max-width: 767px) {
+  html, body { background: var(--color-fc-bg); }
 }
 
 /* Hide scrollbars inside the phone content area to keep the look tight */
@@ -43,4 +54,16 @@ body {
 a, img {
   -webkit-user-drag: none;
   user-drag: none;
+}
+
+/* Safe-area-aware top padding.
+   - Desktop has env(safe-area-inset-top)=0, so max() picks the 52/72 fallback
+     (leaves room for our fake Dynamic Island overlay).
+   - Mobile (iPhone with notch): env ≈ 47-59, so max() picks the real inset
+     plus a small gap. Content stays clear of the notch. */
+.pt-topbar {
+  padding-top: max(52px, calc(env(safe-area-inset-top) + 8px));
+}
+.pt-topbar-loose {
+  padding-top: max(72px, calc(env(safe-area-inset-top) + 28px));
 }

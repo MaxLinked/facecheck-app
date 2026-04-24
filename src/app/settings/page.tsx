@@ -53,7 +53,7 @@ export default function SettingsPage() {
   return (
     <div className="w-full min-h-full" style={{ background: FC.bg }}>
       {/* Header */}
-      <div className="pt-[52px] px-4 flex items-center justify-between">
+      <div className="pt-topbar px-4 flex items-center justify-between">
         <button
           type="button"
           onClick={() => router.back()}

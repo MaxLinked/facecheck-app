@@ -81,7 +81,7 @@ export default function AvatarPage({ params }: { params: Promise<{ id: string }>
       }}
     >
       {/* Top bar */}
-      <div className="pt-[52px] px-4 flex items-center justify-between">
+      <div className="pt-topbar px-4 flex items-center justify-between">
         <button
           type="button"
           onClick={() => router.back()}

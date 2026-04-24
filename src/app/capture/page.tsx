@@ -30,7 +30,10 @@ export default function CapturePage() {
       }}
     >
       {/* Top bar */}
-      <div className="absolute top-[52px] left-0 right-0 px-4 flex items-center justify-between z-20">
+      <div
+        className="absolute left-0 right-0 px-4 flex items-center justify-between z-20"
+        style={{ top: "max(52px, calc(env(safe-area-inset-top) + 8px))" }}
+      >
         <button
           type="button"
           onClick={() => router.back()}

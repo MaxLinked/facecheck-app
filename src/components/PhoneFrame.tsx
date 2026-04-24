@@ -22,8 +22,16 @@ const OUTER_H = SCREEN_H + 2 * (TITANIUM + BEZEL);
 export default function PhoneFrame({ children }: PhoneFrameProps) {
   return (
     <>
-      {/* Mobile: full-bleed */}
-      <div className="md:hidden min-h-screen bg-[var(--color-fc-bg)]">
+      {/* Mobile: full-bleed — fills the real viewport height, respects safe areas */}
+      <div
+        className="md:hidden bg-[var(--color-fc-bg)]"
+        style={{
+          height: "100dvh",
+          width: "100%",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
         {children}
       </div>
 

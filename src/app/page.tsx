@@ -30,7 +30,10 @@ export default function HomePage() {
   const todayStr = new Date().toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" });
 
   return (
-    <div className="px-5 pt-[52px]">
+    <div
+      className="px-5"
+      style={{ paddingTop: "max(52px, calc(env(safe-area-inset-top) + 8px))" }}
+    >
       {/* Greeting header */}
       <div className="flex items-start justify-between mb-4">
         <div>

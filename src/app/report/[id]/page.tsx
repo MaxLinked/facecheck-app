@@ -49,7 +49,7 @@ export default function ReportPage({ params }: { params: Promise<{ id: string }>
   return (
     <div className="w-full min-h-full" style={{ background: FC.bg }}>
       {/* Header */}
-      <div className="pt-[52px] px-4 pb-0 flex items-center justify-between">
+      <div className="pt-topbar px-4 pb-0 flex items-center justify-between">
         <button
           type="button"
           onClick={() => router.push("/")}

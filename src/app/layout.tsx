@@ -14,6 +14,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  viewportFit: "cover", // enable env(safe-area-inset-*) so content stays clear of notch / home indicator
   themeColor: "#0A7AE0",
 };
 
