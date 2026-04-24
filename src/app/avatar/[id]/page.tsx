@@ -75,7 +75,7 @@ export default function AvatarPage({ params }: { params: Promise<{ id: string }>
 
   return (
     <div
-      className="relative w-full min-h-full overflow-hidden"
+      className="relative w-full min-h-screen-dvh overflow-hidden pb-tab"
       style={{
         background: `linear-gradient(180deg, #0D1015 0%, #1F2430 100%)`,
       }}

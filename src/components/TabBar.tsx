@@ -10,7 +10,7 @@ export default function TabBar() {
   const pathname = usePathname();
 
   const tabs = [
-    { href: "/", label: "Home", icon: HomeIcon, match: (p: string) => p === "/" || p.startsWith("/capture") || p.startsWith("/analyzing") || p.startsWith("/report") || p.startsWith("/avatar") },
+    { href: "/", label: "Home", icon: HomeIcon, match: (p: string) => p === "/" || p.startsWith("/capture") || p.startsWith("/analyzing") || p.startsWith("/report") || p.startsWith("/avatar") || p.startsWith("/settings") },
     { href: "/history", label: "History", icon: HistoryIcon, match: (p: string) => p.startsWith("/history") },
   ];
 

@@ -67,3 +67,17 @@ a, img {
 .pt-topbar-loose {
   padding-top: max(72px, calc(env(safe-area-inset-top) + 28px));
 }
+
+/* Bottom clearance for pages whose content scrolls under the floating TabBar.
+   = tab-bar height (~68px) + its own safe-area gap. */
+.pb-tab {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 96px);
+}
+/* Bottom clearance for pages without the tab bar — just clear the home indicator. */
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 16px);
+}
+/* Fill the full visible viewport on both desktop and mobile. */
+.min-h-screen-dvh {
+  min-height: 100dvh;
+}

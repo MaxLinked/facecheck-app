@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <PhoneFrame>
           <div className="relative w-full h-full">
-            <DragScroll className="absolute inset-0 overflow-y-auto fc-scroll pb-24 bg-[var(--color-fc-bg)]">
+            <DragScroll className="absolute inset-0 overflow-y-auto fc-scroll">
               {children}
             </DragScroll>
             <TabBar />

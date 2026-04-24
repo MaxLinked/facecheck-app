@@ -31,7 +31,7 @@ export default function HomePage() {
 
   return (
     <div
-      className="px-5"
+      className="px-5 min-h-screen-dvh pb-tab bg-[var(--color-fc-bg)]"
       style={{ paddingTop: "max(52px, calc(env(safe-area-inset-top) + 8px))" }}
     >
       {/* Greeting header */}

@@ -24,7 +24,7 @@ export default function CapturePage() {
 
   return (
     <div
-      className="relative w-full h-full min-h-full overflow-hidden text-white"
+      className="relative w-full min-h-screen-dvh overflow-hidden text-white pb-tab"
       style={{
         background: `radial-gradient(circle at 50% 38%, #1F2430 0%, #0A0B0F 72%)`,
       }}

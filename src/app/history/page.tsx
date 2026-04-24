@@ -33,7 +33,7 @@ export default function HistoryPage() {
 
   if (sessions.length === 0 || !latest) {
     return (
-      <div className="pt-topbar-loose px-6 flex flex-col items-center text-center">
+      <div className="pt-topbar-loose px-6 flex flex-col items-center text-center min-h-screen-dvh bg-[var(--color-fc-bg)]">
         <div
           className="w-16 h-16 rounded-full flex items-center justify-center mb-4"
           style={{ background: FC.surface3 }}
@@ -101,7 +101,7 @@ export default function HistoryPage() {
   const sbDelta = latest.sunnybrook - latest.trendSunnybrook[0];
 
   return (
-    <div className="px-4 pt-topbar pb-8 flex flex-col gap-3">
+    <div className="px-4 pt-topbar pb-tab flex flex-col gap-3 min-h-screen-dvh bg-[var(--color-fc-bg)]">
       {/* Trend headline card */}
       <PreviewBadge>
         <Card padding={18}>

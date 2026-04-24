@@ -61,7 +61,7 @@ export default function AnalyzingPage() {
 
   return (
     <div
-      className="w-full min-h-full flex flex-col items-center justify-center px-6 py-16 text-center"
+      className="w-full min-h-screen-dvh flex flex-col items-center justify-center px-6 py-16 text-center pb-tab"
       style={{
         background: `linear-gradient(180deg, ${FC.brandMist} 0%, #FFFFFF 100%)`,
       }}

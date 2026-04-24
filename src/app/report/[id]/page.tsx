@@ -47,7 +47,7 @@ export default function ReportPage({ params }: { params: Promise<{ id: string }>
   }
 
   return (
-    <div className="w-full min-h-full" style={{ background: FC.bg }}>
+    <div className="w-full min-h-screen-dvh pb-tab" style={{ background: FC.bg }}>
       {/* Header */}
       <div className="pt-topbar px-4 pb-0 flex items-center justify-between">
         <button
