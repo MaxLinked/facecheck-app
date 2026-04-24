@@ -7,23 +7,15 @@ import { FC, HB_GRADES, sevColor, sevSoft } from "@/lib/design";
 import type { HBGrade } from "@/lib/types";
 
 // ────────────────────────────────────────────────────────────
-// PreviewBadge — renders a "PREVIEW" corner chip (Tier C indicator)
+// PreviewBadge — no-op wrapper (retained so call sites compile; the visual
+// "PREVIEW" marker was removed to keep the prototype looking polished).
 // ────────────────────────────────────────────────────────────
 
 export function PreviewBadge({ children, className }: { children: ReactNode; className?: string }) {
-  return (
-    <div className={cn("relative", className)}>
-      {children}
-      <div className="absolute top-1.5 right-1.5 z-10 pointer-events-none">
-        <span
-          className="text-[8px] tracking-wider font-semibold text-neutral-500 uppercase px-1.5 py-0.5 rounded-full"
-          style={{ background: "rgba(255,255,255,0.85)", backdropFilter: "blur(8px)" }}
-        >
-          PREVIEW
-        </span>
-      </div>
-    </div>
-  );
+  if (className) {
+    return <div className={cn(className)}>{children}</div>;
+  }
+  return <>{children}</>;
 }
 
 // ────────────────────────────────────────────────────────────
